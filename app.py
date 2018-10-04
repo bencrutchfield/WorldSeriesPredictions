@@ -6,6 +6,7 @@ import pymysql
 import json
 import config
 from flask_cors import CORS
+import configfunc
 
 app = Flask(__name__)
 
@@ -32,11 +33,7 @@ def home():
 @app.route('/2016')
 def player_16():
    # create mysql connection
-    conn = pymysql.connect(host=config._DB_CONF['host'], 
-                           port=config._DB_CONF['port'], 
-                           user=config._DB_CONF['user'], 
-                           passwd=config._DB_CONF['passwd'], 
-                           db=config._DB_CONF['db'])
+    conn = configfunc.x
     cur = conn.cursor()
     sql="SELECT * FROM player_stats_2016_season;"
     cur.execute(sql)
@@ -55,65 +52,39 @@ def player_16():
 @app.route('/2017')
 def player_17():
    # create mysql connection
-    conn = pymysql.connect(host=config._DB_CONF['host'], 
-                           port=config._DB_CONF['port'], 
-                           user=config._DB_CONF['user'], 
-                           passwd=config._DB_CONF['passwd'], 
-                           db=config._DB_CONF['db'])
+    conn = configfunc.x
     cur = conn.cursor()
     sql="SELECT * FROM player_stats_2017_season;"
     cur.execute(sql)
-    # get all column names
     columns = [desc[0] for desc in cur.description]
-    # get all data
     rows=cur.fetchall()
-    # build json 
     result = rows_to_json(columns,rows)
-    #print(result)
     cur.close()
     conn.close()
     return result
 
 @app.route('/2018')
 def player_18():
-   # create mysql connection
-    conn = pymysql.connect(host=config._DB_CONF['host'], 
-                           port=config._DB_CONF['port'], 
-                           user=config._DB_CONF['user'], 
-                           passwd=config._DB_CONF['passwd'], 
-                           db=config._DB_CONF['db'])
+    conn = configfunc.x
     cur = conn.cursor()
     sql="SELECT * FROM player_stats_2018_season;"
     cur.execute(sql)
-    # get all column names
     columns = [desc[0] for desc in cur.description]
-    # get all data
     rows=cur.fetchall()
-    # build json 
     result = rows_to_json(columns,rows)
-    #print(result)
     cur.close()
     conn.close()
     return result
 
 @app.route('/sep')
 def stats():
-   # create mysql connection
-    conn = pymysql.connect(host=config._DB_CONF['host'], 
-                           port=config._DB_CONF['port'], 
-                           user=config._DB_CONF['user'], 
-                           passwd=config._DB_CONF['passwd'], 
-                           db=config._DB_CONF['db'])
+    conn = configfunc.x
     cur = conn.cursor()
     sql="SELECT * FROM sep_2018_full_stats;"
     cur.execute(sql)
-    # get all column names
     columns = [desc[0] for desc in cur.description]
-    # get all data
     rows=cur.fetchall()
-    # build json 
     result = rows_to_json(columns,rows)
-    #print(result)
     cur.close()
     conn.close()
     return result
