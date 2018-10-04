@@ -51,6 +51,7 @@ def player_16():
     conn.close()
     return result
 
+
 @app.route('/2017')
 def player_17():
    # create mysql connection
