@@ -7,6 +7,7 @@ import json
 import config
 from flask_cors import CORS
 import sql
+from flask import render_template_string
 
 x = pymysql.connect(host=config._DB_CONF['host'], 
                            port=config._DB_CONF['port'], 
@@ -81,3 +82,6 @@ def sep():
     cur.close()
     conn.close()
     return result
+
+
+    

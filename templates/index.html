@@ -1,70 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Project3</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- Links-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-
-<!--Scripts-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- JS scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 3 </title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="static/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+     <!-- FONTAWESOME STYLES-->
+    <link href="static/css/font-awesome.css" rel="stylesheet" />
+     <!-- MORRIS CHART STYLES-->
+    <link href="static/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="static/css/custom.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"/>
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
-
-<!--html code starts-->
 <body>
-
-
-<!-- Top Nav Bar -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="index.html">MLB Predictions</a>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">MLB Prediction</a> 
+            </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+				<li class="text-center">
+                    <img src="static/img/KFYy.gif" class="user-image img-responsive"/>
+					</li>
+                    <li>
+                        <a  href="viz.html"><i class="fa fa-sitemap fa-3x"></i> Visualization</a>
+                    </li>
+					<li>
+                        <a   href="compar.html"><i class="fa fa-bar-chart-o fa-3x"></i>Comparison</a>
+                    </li>	
+                      <li  >
+                        <a  href="data.html"><i class="fa fa-table fa-3x"></i>Data</a>
+                    </li>                    
+                </ul>
+               
+            </div>
+            
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h2>2018 World Series Predictions</h2>   
+                        <h5>Data</h5>
+                       
+                    </div>
+                </div>
+                 <!-- /. ROW  -->
+                 <hr />
+               
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="viz.html">Visualizations</a></li>
-        <li><a href="data.html">Data</a></li>
-        <li><a href="compar.html">Comparisons</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<!--Containters-->
-      <div class="section">
-        <h1>2018 World Series</h1>
-        <div class="video-container">
-            <div class="color-overlay"></div>
-            <video autoplay loop muted>
-                <source src="vids/got.mp4" type="video/mp4" codecs="avc1.42E01E, mp4a.40.2">
-            </video>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
         </div>
-    </div>
-  </div>
-</div>
-
-<!--Footer-->
-<!-- <footer class="container-fluid text-center">
-  <p> © Project 3: WorldSeries 2018</p>
-</footer> -->
-
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="static/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="static/js/jquery.metisMenu.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="static/js/custom.js"></script>
+    
+   
 </body>
 </html>

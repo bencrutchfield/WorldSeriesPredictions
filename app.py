@@ -7,16 +7,31 @@ import json
 import config
 from flask_cors import CORS
 import sql
+from flask import render_template_string
 
 app = Flask(__name__)
 
 CORS(app)
 
-#### ROUTES ####
+#### WEB ROUTES ####
 
-@app.route("/")
+@app.route("/index.html")
 def home():
     return render_template('index.html')
+
+@app.route("/viz.html")
+def viz():
+    return render_template('viz.html')
+
+@app.route("/data.html")
+def data():
+    return render_template('data.html')
+
+@app.route("/compar.html")
+def comparison():
+    return render_template('compar.html')
+
+#### DATA ROUTES #####
 
 @app.route('/2016')
 def stats_16():
