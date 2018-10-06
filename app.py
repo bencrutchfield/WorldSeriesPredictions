@@ -5,13 +5,14 @@ import decimal
 import pymysql
 import json
 import config
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import sql
 from flask import render_template_string
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
-CORS(app)
 
 #### WEB ROUTES ####
 
