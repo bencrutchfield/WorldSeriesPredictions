@@ -57,7 +57,80 @@
                 <div class="row">
                     <div class="col-md-12">
                      <h2>2018 World Series Predictions</h2>   
-                        <h5>Data</h5>
+                     <div id="chart">
+                        <svg height="800" width="1100">
+                            <defs>
+                                <pattern id="CLE" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/CLE.PNG"></image>
+                                </pattern>
+            
+                                <pattern id="HOU" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/HOU.png"></image>
+                                </pattern>
+            
+                                <pattern id="BOS" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/BOS.png"></image>
+                                </pattern>
+            
+                                <pattern id="NYY" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/NYY.png"></image>
+                                </pattern>
+            
+                                <pattern id="OAK" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/OAK.png"></image>
+                                </pattern>
+            
+                                <pattern id="ATL" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/ATL.png"></image>
+                                </pattern>
+            
+                                <pattern id="LAD" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/LAD.png"></image>
+                                </pattern>
+            
+                                <pattern id="COL" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/COL.png"></image>
+                                </pattern>
+            
+                                <pattern id="CHC" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/CHC.png"></image>
+                                </pattern>
+            
+                                <pattern id="MIL" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/MIL.png"></image>
+                                </pattern>
+            
+                                <pattern id="bracket" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height=".5" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://raw.githubusercontent.com/bencrutchfield/WorldSeriesPredictions/master/Logos/bracket_blank.png"></image>
+                                </pattern>
+            
+                                <pattern id="qm" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                                    <image height="1" width="1" preserveAspectRation="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://i.ebayimg.com/thumbs/images/g/SHIAAOSwZ1lWeUok/s-l96.jpg"></image>
+                                </pattern>
+            
+                            </defs>
+                            <rect x="-80" y="0" width="1200" height="1200" fill="url(#bracket)"></rect>
+                            <rect x="110" y="0" width="65" height="65" fill="url(#CLE)"></rect>
+                            <rect x="110" y="180" width="65" height="65" fill="url(#HOU)"></rect>
+                            <rect x="110" y="285" width="65" height="65" fill="url(#BOS)"></rect>
+                            <rect x="110" y="465" width="65" height="65" fill="url(#NYY)"></rect>
+                            <rect x="0" y="385" width="65" height="65" fill="url(#NYY)"></rect>
+                            <rect x="0" y="535" width="65" height="65" fill="url(#OAK)"></rect>
+                            <rect x="865" y="0" width="65" height="65" fill="url(#ATL)"></rect>
+                            <rect x="865" y="180" width="65" height="65" fill="url(#LAD)"></rect>
+                            <rect x="865" y="285" width="65" height="65" fill="url(#MIL)"></rect>
+                            <rect x="865" y="465" width="65" height="65" fill="url(#COL)"></rect>
+                            <rect x="978" y="385" width="65" height="65" fill="url(#COL)"></rect>
+                            <rect x="978" y="535" width="65" height="65" fill="url(#CHC)"></rect>
+                            <rect x="236" y="89" width="65" height="65" fill="url(#qm)"></rect> <!-- CLExHOU Winner -->
+                            <rect x="236" y="375" width="65" height="65" fill="url(#qm)"></rect> <!-- BOSxNYY Winner -->
+                            <rect x="364" y="233" width="65" height="65" fill="url(#qm)"></rect> <!-- AL Winner -->
+                            <rect x="487" y="233" width="65" height="65" fill="url(#qm)"></rect> <!-- WS Winner -->
+                            <rect x="611" y="233" width="65" height="65" fill="url(#qm)"></rect> <!-- NL Winner -->
+                            <rect x="736" y="89" width="65" height="65" fill="url(#qm)"></rect> <!-- ATLxLAD Winner -->
+                            <rect x="736" y="375" width="65" height="65" fill="url(#qm)"></rect> <!-- MILxCOL Winner -->
+            
+                    </div>
                        
                     </div>
                 </div>
